@@ -1,0 +1,222 @@
+<style>
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+#leftside {
+    float:left;
+    width: 30%;
+    min-height: 1500px;
+    background-color:rgb(77, 192, 154);
+}
+#rightside {
+    float:left;
+    width: 70%;
+    min-height: 1500px;
+    background-color:rgb(238, 226, 192);
+    position:relative;
+}
+#container {
+    background-color:rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    /* left: 15%; */
+    /* min-width: 1100px; */
+    /* min-height: 1050px; */
+    min-width: 1000px;
+    min-height: 1350px;
+    border-radius: 0.7em;
+}
+header {
+    /* height: 50px; */
+    position: relative;
+    background-color:rgba(231, 229, 229, 0.5);
+    font-size: 2.75em;
+    padding:0.5em;
+    color:rgb(216, 150, 7);
+}
+header span {
+    font-family: 'Sacramento', cursive;
+}
+main {
+    position: relative;
+}
+main h2 {
+    position: absolute;
+    left: 20%;
+    top: 30px;
+    margin: 25px 0 200px 50px;
+    color:rgb(60, 190, 160);
+    text-transform: uppercase;
+}
+main #photos img {
+    margin: 0.75em;
+    border: 0.85em solid rgb(255, 255, 255);
+}
+section#blogposts {
+    position: absolute;
+    left: 20%;
+    top: 70px;
+    padding: 50px;
+}
+main .post {
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid rgba(83, 78, 58, 0.6);
+    border-radius: 0.5em;
+}
+main .post img {
+    width: 60px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+#userDescBox {
+    width:320px;
+    background: rgba(0, 0, 0, 0.9);
+    font: white;
+    z-index: 1;
+    top:25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    border-radius: 20px;
+}
+#userDescBox::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    background: rgb(43, 42, 42);
+    width: 90%;
+    height:4px;
+    left:3%;
+    border-radius:50%;
+    filter: blur(3px);
+}
+/* Modal Content */
+.modal-info {
+    margin: auto;
+    padding: 20px;
+    color: white;
+}
+.modal-info span {
+    font-weight: bold;
+}
+#userDescBox > .modal-info > * {
+    font-family: 'Montserrat', sans-serif;
+}
+/* The Close Button */
+.close-btn {
+    color: rgb(238, 226, 192);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgb(77, 192, 154);
+    text-decoration: none;
+    cursor: pointer;
+}
+#userDescBox button {
+    margin-top: 20px;
+    cursor: pointer;
+}
+#userDescBox button:hover{
+    background-color: rgb(77, 192, 154);
+    color: rgb(238, 226, 192);
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 15%;
+}
+.navbar {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0); 
+}
+nav #navbarContent {
+    justify-content: center;
+}
+nav a {
+    color: rgb(77, 192, 154) !important;
+    font-size: 18px;
+    margin: 0 20px;
+}
+nav a:hover,
+nav a:focus {
+    color:rgb(216, 150, 7) !important;
+}
+nav a:focus {
+    text-decoration: underline !important;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+/* Large devices (ipad pro, 1024px and under) */
+@media only screen and (max-width: 1199px) {
+    #container {
+        min-width: 800px;
+        min-height: 1500px;
+    }
+    #leftside {
+        min-height: 1700px;
+    }
+    #rightside {
+        min-height: 1700px;
+    }
+}
+
+/* Medium devices (laptops/desktops, 992px and under) */
+@media only screen and (max-width: 992px) {
+    .navbar {
+        top: 30%;
+        left: 85%;
+    }
+    header {
+
+    }
+    nav #navbarContent {
+        /* justify-content: center; */
+        /* text-align: right; */
+        background-color: white;
+        padding: 25px;
+        z-index: 5;
+    }
+    nav a {
+        margin: 0;
+    }
+    #container {
+        min-width: 800px;
+        min-height: 1500px;
+    }
+    #leftside {
+        min-height: 1700px;
+    }
+    #rightside {
+        min-height: 1700px;
+    }
+}
+
+/* Smaller devices (ipad, 768px and under) */
+@media only screen and (max-width: 768px) {
+    #container {
+        min-width: 600px;
+        min-height: 1850px;
+    }
+    #leftside {
+        min-height: 2000px;
+    }
+    #rightside {
+        min-height: 2000px;
+    }
+}
+</style>
