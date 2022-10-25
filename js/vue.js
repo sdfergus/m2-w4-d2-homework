@@ -9,6 +9,9 @@ var vm1 = new Vue({
         },
         'chickenchilliimg': {
             template: '<img src="images/chili.jpg" alt="White Chicken Chili" width="180">'
+        },
+        'navbar': {
+            template: '<nav class="navbar navbar-light navbar-expand-lg py-0 px-0 position-absolute"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded = "false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarContent"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="#">Home</a></li><li class="nav-item"><a class="nav-link" href="#">Recipes</a></li><li class="nav-item"><a class="nav-link" href="#">Lifestyles</a></li><li class="nav-item"><a class="nav-link" href="#">Videos</a></li><li class="nav-item"><a class="nav-link" href="#">About</a></li></ul></div></nav>'
         }
     },
     data: {
