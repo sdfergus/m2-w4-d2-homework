@@ -17,13 +17,13 @@
             #leftside {
                 float:left;
                 width: 30%;
-                min-height: 1300px;
+                min-height: 1400px;
                 background-color:rgb(77, 192, 154);
             }
             #rightside {
                 float:left;
                 width: 70%;
-                min-height: 1300px;
+                min-height: 1400px;
                 background-color:rgb(238, 226, 192);
                 position:relative;
             }
@@ -36,11 +36,11 @@
                 /* min-width: 1100px; */
                 /* min-height: 1050px; */
                 min-width: 1000px;
-                min-height: 1200px;
+                min-height: 1300px;
                 border-radius: 0.7em;
             }
             header {
-                height: 50px;
+                /* height: 50px; */
                 background-color:rgba(231, 229, 229, 0.5);
                 font-size: 2.75em;
                 padding:0.5em;
@@ -151,6 +151,8 @@
             }
         </style>
 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
         <aside id="leftside"></aside>
@@ -172,7 +174,7 @@
                         <span class="author">{{ post1.author }}</span> — 
                         <span class="date">{{ post1.date }}</span>
                         <span class="reply">{{ post1.reply }}</span>
-                        <p>
+                        <p class="mt-3">
                             {{ post1.comment }}
                         </p>
                     </div>
@@ -182,7 +184,7 @@
                         <span class="author">{{ post2.author }}</span> — 
                         <span class="date">{{ post2.date }}</span>
                         <span class="reply">{{ post2.reply }}</span>
-                        <p>
+                        <p class="mt-3">
                             {{ post2.comment }}
                         </p>
                     </div>
@@ -192,7 +194,7 @@
                         <span class="author">{{ post3.author }}</span> — 
                         <span class="date">{{ post3.date }}</span>
                         <span class="reply">{{ post3.reply }}</span>
-                        <p>
+                        <p class="mt-3">
                             {{ post3.comment }}
                         </p>
                     </div>
@@ -202,7 +204,7 @@
                         <span class="author">{{ post4.author }}</span> — 
                         <span class="date">{{ post4.date }}</span>
                         <span class="reply">{{ post4.reply }}</span>
-                        <p>
+                        <p class="mt-3">
                             {{ post4.comment }}
                         </p>
                     </div>  
@@ -227,6 +229,13 @@
             </footer>
         
         </div>
+        
+        <!-- External js  -->
         <script src="js/vue.js"></script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
