@@ -7,6 +7,9 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <style>
             * {
                 font-family:Arial, Helvetica, sans-serif;
@@ -28,11 +31,11 @@
                 background-color:rgba(255, 255, 255, 0.85);
                 position: absolute;
                 top: 15%;
-                /* left: 15%; */
                 left: 10%;
+                /* left: 15%; */
                 /* min-width: 1100px; */
-                min-width: 1000px;
                 /* min-height: 1050px; */
+                min-width: 1000px;
                 min-height: 1200px;
                 border-radius: 0.7em;
             }
@@ -79,6 +82,65 @@
                 vertical-align: middle;
                 margin-right: 20px;
             }
+            #userDescBox {
+                width:320px;
+                background: rgba(0, 0, 0, 0.9);
+                font: white;
+                z-index: 1;
+                top:25%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                position: fixed;
+                border-radius: 20px;
+            }
+            #userDescBox::after {
+                content: "";
+                position: absolute;
+                bottom: -30px;
+                background: rgb(43, 42, 42);
+                width: 90%;
+                height:4px;
+                left:3%;
+                border-radius:50%;
+                filter: blur(3px);
+            }
+            /* Modal Content */
+            .modal-content {
+                margin: auto;
+                padding: 20px;
+                color: white;
+            }
+            .modal-content span {
+                font-weight: bold;
+            }
+            #userDescBox > .modal-content > * {
+                font-family: 'Montserrat', sans-serif;
+            }
+            /* The Close Button */
+            .close {
+                color: rgb(238, 226, 192);
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: rgb(77, 192, 154);
+                text-decoration: none;
+                cursor: pointer;
+            }
+            #userDescBox button {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+            #userDescBox button:hover{
+                background-color: rgb(77, 192, 154);
+                color: rgb(238, 226, 192);
+                font-weight: bold;
+                padding: 2px 5px;
+                border-radius: 15%;
+            }
             footer {
                 position: absolute;
                 bottom: 0;
@@ -88,8 +150,6 @@
                 font-size: 0.85em;
             }
         </style>
-
-        
 
     </head>
     <body>
@@ -108,7 +168,7 @@
                 <section id="blogposts">
                 
                     <div class="post">
-                        <img v-bind:src='src' alt="profile placeholder" >
+                        <img v-bind:src='post1.src' alt="Brianna placeholder" v-on:click="showDesc">
                         <span class="author">{{ post1.author }}</span> — 
                         <span class="date">{{ post1.date }}</span>
                         <span class="reply">{{ post1.reply }}</span>
@@ -118,7 +178,7 @@
                     </div>
 
                     <div class="post">
-                        <img v-bind:src='src' alt="profile placeholder" >
+                        <img v-bind:src='post2.src' alt="Linh placeholder" v-on:click="showDesc">
                         <span class="author">{{ post2.author }}</span> — 
                         <span class="date">{{ post2.date }}</span>
                         <span class="reply">{{ post2.reply }}</span>
@@ -128,7 +188,7 @@
                     </div>
 
                     <div class="post">
-                        <img v-bind:src='src' alt="profile placeholder" >
+                        <img v-bind:src='post3.src' alt="Catherine placeholder" v-on:click="showDesc">
                         <span class="author">{{ post3.author }}</span> — 
                         <span class="date">{{ post3.date }}</span>
                         <span class="reply">{{ post3.reply }}</span>
@@ -138,7 +198,7 @@
                     </div>
 
                     <div class="post">
-                        <img v-bind:src='src' alt="profile placeholder" >
+                        <img v-bind:src='post4.src' alt="Kali placeholder" v-on:click="showDesc">
                         <span class="author">{{ post4.author }}</span> — 
                         <span class="date">{{ post4.date }}</span>
                         <span class="reply">{{ post4.reply }}</span>
@@ -148,6 +208,17 @@
                     </div>  
 
                 </section>
+                
+                <div v-if="show" id="userDescBox">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" v-on:click="closeModal">&times;</span>
+                        <h1>{{ userInfo.name }}</h1>
+                        <p><span>Foodie Level: </span>{{ userInfo.level }}</p>
+                        <p><span>Bio:</span><br>{{ userInfo.bio }}</p>
+                        <button v-on:click="closeModal">Close</button>
+                    </div>
+                </div>
 
             </main>
 
