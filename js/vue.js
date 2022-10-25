@@ -6,6 +6,9 @@ var vm1 = new Vue({
         },
         'commentstitle': {
             template: '<h2>Comments</h2>'
+        },
+        'chickenchilliimg': {
+            template: '<img src="images/chili.jpg" alt="White Chicken Chili" width="180">'
         }
     },
     data: {
