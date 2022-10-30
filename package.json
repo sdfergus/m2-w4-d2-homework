@@ -1,0 +1,19 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "Converting Foodblog page to an Express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdfergus/m2-w4-d2-homework.git"
+  },
+  "author": "Shandira Ferguson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdfergus/m2-w4-d2-homework/issues"
+  },
+  "homepage": "https://github.com/sdfergus/m2-w4-d2-homework#readme"
+}
