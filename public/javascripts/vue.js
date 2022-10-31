@@ -8,7 +8,7 @@ var vm1 = new Vue({
             template: '<h2>Comments</h2>'
         },
         'chickenchilliimg': {
-            template: '<img src="public/images/chili.jpg" alt="White Chicken Chili" width="180">'
+            template: '<img src="/images/chili.jpg" alt="White Chicken Chili" width="180">'
         },
         'navbar': {
             template: '<nav class="navbar navbar-light navbar-expand-lg py-0 px-0 position-absolute"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded = "false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarContent"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="#">Home</a></li><li class="nav-item"><a class="nav-link" href="#">Recipes</a></li><li class="nav-item"><a class="nav-link" href="#">Lifestyles</a></li><li class="nav-item"><a class="nav-link" href="#">Videos</a></li><li class="nav-item"><a class="nav-link" href="#">About</a></li></ul></div></nav>'
@@ -16,7 +16,7 @@ var vm1 = new Vue({
     },
     data: {
         post1: {
-            src:'public/images/profile.png',
+            src:'/images/profile.png',
             author:'Brianna', 
             date: 'February 18, 2021 @ 3:30 pm', 
             reply: 'REPLY', 
@@ -28,7 +28,7 @@ var vm1 = new Vue({
             }
         },
         post2: {
-            src:'public/images/profile.png',
+            src:'/images/profile.png',
             author:'LINH', 
             date: 'February 15, 2021 @ 9:46 am', 
             reply: 'REPLY', 
@@ -40,7 +40,7 @@ var vm1 = new Vue({
             }
         },
         post3: {
-            src:'public/images/profile.png',
+            src:'/images/profile.png',
             author:'CATHERINE LEONARDO', 
             date: 'February 13, 2021 @ 12:58 pm', 
             reply: 'REPLY', 
@@ -52,7 +52,7 @@ var vm1 = new Vue({
             }
         },
         post4: {
-            src:'public/images/profile.png',
+            src:'/images/profile.png',
             author:'KALI', 
             date: 'February 13, 2021 @ 11:31 am', 
             reply: 'REPLY', 
